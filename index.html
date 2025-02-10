@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrée de Code Colis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Entrer le code du colis</h2>
+        <input type="text" id="codeInput" placeholder="Saisir le code...">
+        <button onclick="envoyerCode()">Envoyer</button>
+    </div>
+
+    <script>
+        function envoyerCode() {
+            const code = document.getElementById('codeInput').value;
+            if(code) {
+                alert('Code envoyé : ' + code);
+                // Ici, on ajoutera la connexion à SharePoint plus tard
+            } else {
+                alert('Veuillez entrer un code.');
+            }
+        }
+    </script>
+</body>
+</html>
